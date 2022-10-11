@@ -28,7 +28,7 @@ jobs:
         port: ${{ secrets.SSH_PORT }}
         project_path: ${{ secrets.PROJECT_PATH }} 
      
-    - run: npm ci
+    - run: npm i
     - run: npm run build
     - run: npm test
 
