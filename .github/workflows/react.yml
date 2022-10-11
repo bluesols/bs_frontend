@@ -29,10 +29,8 @@ jobs:
         user: ${{ secrets.SSH_USER }}
         key: ${{ secrets.SSH_PRIVATE_KEY }}
         port: ${{ secrets.SSH_PORT }}
-      
-        script: 
-         cd ${{ secrets.PROJECT_PATH }} && npm ci && npm run build --if-present && npm tes    
+        project_path: ${{ secrets.PROJECT_PATH }} 
      
-     # - run: npm ci
-     # - run: npm run build --if-present
-    # - run: npm test
+    - run: npm ci
+    - run: npm run build --if-present
+    - run: npm test
