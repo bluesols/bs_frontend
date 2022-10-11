@@ -1,9 +1,9 @@
-name: Node.js CI
+name: React CI/CD
 
 on:
   push:
     branches: [ "main" ]
-  
+
 
 jobs:
   build:
@@ -12,9 +12,9 @@ jobs:
 
     strategy:
       matrix:
-        node-version: [18.x]
+        node-version: [14.x]
         # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
-
+    
     steps:
     - uses: actions/checkout@v3
     - name: Use Node.js ${{ matrix.node-version }}
@@ -22,6 +22,13 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
-    - run: npm i
+        host: ${{ secrets.SSH_HOST }}
+        user: ${{ secrets.SSH_USER }}
+        key: ${{ secrets.SSH_PRIVATE_KEY }}
+        port: ${{ secrets.SSH_PORT }}
+        project_path: ${{ secrets.PROJECT_PATH }} 
+     
+    - run: npm ci
     - run: npm run build
     - run: npm test
+
