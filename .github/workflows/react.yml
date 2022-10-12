@@ -8,7 +8,7 @@ on:
 jobs:
   build:
 
-    runs-on: self-hosted
+    runs-on: ubuntu-latest
 
     strategy:
       matrix:
@@ -31,5 +31,4 @@ jobs:
     - run: npm i
     - run: npm run build
     - run: npm test
-    - run: mv /var/www/stage.bluesols.com/html/bs_frontend/bs_frontend/bs_frontend/build /var/www/stage.bluesols.com/html
 
