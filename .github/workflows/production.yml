@@ -14,5 +14,5 @@ jobs:
           key: ${{ secrets.SSH_PRIVATE_KEY }}
           port: ${{ secrets.SSH_PORT }}
           script: |
-            cd ${{ secrets.PROJECT_PATH }} && git pull origin main && npm install && npm run build
+            echo "Github Successful"
     
