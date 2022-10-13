@@ -1,0 +1,18 @@
+name: production
+
+on: [push]
+
+jobs:
+  write-to-console:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Deploy To Staging
+        uses: fifsky/ssh-action@master
+        with:
+          host: ${{ secrets.SSH_HOST }}
+          user: ${{ secrets.SSH_USER }}
+          key: ${{ secrets.SSH_PRIVATE_KEY }}
+          port: ${{ secrets.SSH_PORT }}
+          command: |
+            cd /var/www/html/bs_frontend && pwd && whoami && export NVM_DIR="$HOME/.nvm" && [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" && git pull origin main && npm install && npm run build
+    
