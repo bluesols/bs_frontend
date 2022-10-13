@@ -16,5 +16,5 @@ jobs:
           key: ${{ secrets.SSH_PRIVATE_KEY }}
           port: ${{ secrets.SSH_PORT }}
           command: |
-            cd /var/www/html/bluesols.com/bs_frontend && pwd && whoami && export NVM_DIR="$HOME/.nvm" && [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" && git pull origin main && npm install && npm run build
+            cd /var/www/html/bluesols.com/ && pwd && whoami && export NVM_DIR="$HOME/.nvm" && [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" && git pull origin main && npm install && npm run build
     
