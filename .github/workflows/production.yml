@@ -27,7 +27,7 @@ jobs:
         key: ${{ secrets.SSH_PRIVATE_KEY }}
         port: ${{ secrets.SSH_PORT }}
     
-    - run: cd /var/www/html/${{ secrets.SSH_PROJECT_PATH }}
+    - run: cd /var/www/html/bs_frontend
     - run: git pull origin main
     - run: npm install
     - run: npm run build
