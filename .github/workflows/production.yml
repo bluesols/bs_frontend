@@ -13,6 +13,6 @@ jobs:
           user: ${{ secrets.SSH_USER }}
           key: ${{ secrets.SSH_PRIVATE_KEY }}
           port: ${{ secrets.SSH_PORT }}
-          script: |
+          command: |
             cd /var/www/html/bs_frontend && git pull origin main && npm install && npm run build
     
