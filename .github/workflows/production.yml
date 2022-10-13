@@ -26,12 +26,9 @@ jobs:
         user: ${{ secrets.SSH_USER }}
         key: ${{ secrets.SSH_PRIVATE_KEY }}
         port: ${{ secrets.SSH_PORT }}
-        project_path: ${{ secrets.PROJECT_PATH }} 
-     
-    - run: npm i
+    
+    - run: cd /var/www/html/${{ secrets.PROJECT_PATH }}
+    - run: git pull origin main
+    - run: npm install
     - run: npm run build
-    - run: npm test
-    - run: npm install -g serve
-    - run: serve -s build 
-
-
+    
