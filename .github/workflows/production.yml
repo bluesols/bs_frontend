@@ -14,5 +14,5 @@ jobs:
           key: ${{ secrets.SSH_PRIVATE_KEY }}
           port: ${{ secrets.SSH_PORT }}
           script: |
-            echo "Github Successful"
+            cd /var/www/html/bs_frontend && git pull origin main && npm install && npm run build
     
