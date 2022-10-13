@@ -13,7 +13,7 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build && scp -r ./build/* root@104.248.152.200:/var/www/stage.bluesols.com/html",
+    "build": "react-scripts build", 
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
