@@ -4,10 +4,15 @@ import './components/style.css';
 
 function App() {
   return (
-    <div className="App">
-      <Navbar />
-    </div>
+   <>
+   <div className="app">
+    <Navbar/>
+   </div>
+
+   </>
+    
   );
 }
 
 export default App;
+
