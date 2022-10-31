@@ -72,8 +72,8 @@ button.navbar-toggler{
 @media (min-width: 520px) {
   #nav-meet-btn {
     border: 1px solid;
-    height: 30px;
-    width: 135px;
+    height: 35px;
+    width: 140px;
     padding: 3px;
     border-radius: 0%;
     font-family: amiri;
@@ -81,10 +81,10 @@ button.navbar-toggler{
 }
 @media (min-width: 520px) {
   #logo-nav {
-    width: 30px;
-    height: 30px;
+    width: 35px;
+    height: 35px;
     padding: 4px;
-    margin-left: 35px;
+    margin-left:65px;
     border-radius: 0%;
     font-family: amiri;
 }
@@ -103,6 +103,7 @@ button.navbar-toggler{
     border: none; 
 }
 }
+
   /* @media (max-width: 991px) {
     #logo-nav{
       margin-left: 275px;
