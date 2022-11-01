@@ -38,6 +38,7 @@
 button.navbar-toggler{
     border: none;
     border-radius: 0px;
+    padding: 0px;
 }
 .navbar-toggler-icon{
   vertical-align: 0px;
